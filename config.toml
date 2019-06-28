@@ -1,6 +1,6 @@
-baseURL = "http://example.com/"
+baseURL = "https://malsobay.com/"
 languageCode = "en-us"
-title = "Minimal"
+title = "M. Alsobay"
 theme = "minimal"
 googleAnalytics = ""
 
