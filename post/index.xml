@@ -6,19 +6,18 @@
     <description>Recent content in Posts on M. Alsobay</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://malsobay.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://malsobay.com/post/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>5 things I’ve learned building data products</title>
+      <link>https://malsobay.com/post/dataproducts/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://malsobay.com/post/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
+      <guid>https://malsobay.com/post/dataproducts/</guid>
+      <description>It’s been a little over two years since I joined Mozn, where we build data-driven products that change the way our users work. In 2017, we were 5x smaller than we are now and were navigating the uncertainty of starting a data science practice from scratch. Today, we still enjoy wading through uncertainty in many domains, but I think we’ve developed a decent understanding of how to design and build data products.</description>
     </item>
     
   </channel>

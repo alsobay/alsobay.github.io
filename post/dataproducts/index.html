@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>5 things I’ve learned building data products</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: blue;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://malsobay.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.55.6" />
+        
+
+        
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143161224-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+
+          gtag('config', 'UA-143161224-1');
+        </script>
+        
+    </head>
+
+    
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">5 things I’ve learned building data products</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/alsobay/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://twitter.com/malsobay/"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/mohammedalsobay/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/dataproducts/">5 things I’ve learned building data products</a></h4>
+    <h5>July 5, 2019</h5>
+    
+    <a href="https://malsobay.com/tags/data-science"><kbd class="item-tag">data science</kbd></a>
+    
+    <a href="https://malsobay.com/tags/product"><kbd class="item-tag">product</kbd></a>
+    
+    <a href="https://malsobay.com/tags/development"><kbd class="item-tag">development</kbd></a>
+    
+    <a href="https://malsobay.com/tags/design"><kbd class="item-tag">design</kbd></a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify"><p><br></p>
+
+<p>It’s been a little over two years since I joined Mozn, where we build data-driven products that change the way our users work. In 2017, we were 5x smaller than we are now and were navigating the uncertainty of starting a data science practice from scratch. Today, we still enjoy wading through uncertainty in many domains, but I think we’ve developed a decent understanding of how to design and build data products.</p>
+
+<p>Going into Mozn (and the industry at large), I had a very “algorithm-centric” view towards data science; that was all my academic background had really taught me, and I had never built a technical product before. Since then, my view towards “data science” has changed, and I’ve come to view the models &amp; algorithms as a relatively minor cog in the complex machinery of a successful data-driven product. <span style="color:rgb(11,48,143)"><strong>Models are easy, humans are hard. Designing products that augment people’s abilities, rather than frustrating them, is hard.</strong></span></p>
+
+<p>To me, one factor that differentiates “data products” from “products” is a dependency on current, real-world data&ndash;this can range from descriptive products (e.g. dashboards) to predictive products (e.g. algorithmic trading systems). The dependency on current data creates the need for infrastructure that can support continuously updating both your inputs and your outputs, and the highly dynamic nature of such a system can make development and maintenance pretty complex; this article from <a href="https://firstround.com/review/everything-we-wish-wed-known-about-building-data-products/">First Round Review</a> does a great job illustrating these frustrations, and a few messages in that piece are things I’ve experienced and learned first-hand.</p>
+
+<p>Another key differentiator is that a data product, as DJ Patil <a href="http://radar.oreilly.com/2012/07/data-jujitsu.html">puts it</a>, “facilitates an end goal through the use of data.” In other words, data is central to the design and operation of a data product, and not a side-effect.</p>
+
+<p>The central role of data is also well-stated in <a href="https://www.oreilly.com/ideas/drivetrain-approach-data-products">“Designing great data products”</a>, a 2012 article in which the authors discuss the exceedingly useful “Objective, Levers, Data, Models” framework for data product design. Since then, co-author Jeremy Howard co-created <a href="https://www.fast.ai/">fast.ai</a>, an amazingly user-centric approach to deep learning development. Although these sources are somewhat dated, I believe their perception of data products has stood the (relatively short) test of time.</p>
+
+<p>In this post, I aim to share some of the ideas, tools, and frameworks that I’ve made core to my approach as a data scientist; I’ve organized them in order of “abstract and general” to “concrete and narrow”. They’re not necessarily groundbreaking or novel, but they’re lessons I learned the hard way, and sometimes there’s value in sharing that journey.</p>
+
+<p><br>
+<br></p>
+
+<p><img src="/img/funnel.png">
+<p style="text-align: center; color:rgb(11,48,143)"> <strong><em>Our journey from abstract to concrete</em></strong> </p></p>
+
+<p><br>
+<br>
+<br></p>
+
+<p><h1 style="color:rgb(11,48,143)"> 1. Solve a pain, don’t use data for data’s sake </h1>
+<br>
+The old saying used to go “nobody got fired for buying IBM”. Today, nobody gets fired for buying a dashboard. How the dashboard is used is often irrelevant; it checks the boxes for “business intelligence” and “technology”, and that’s all that seems to matter in an organization with short-sighted objectives.</p>
+
+<p>Data-driven deployments work best when there’s an actual problem being solved (and sometimes the solution can and should be a dashboard!). Go to the business owner or end user and figure out what keeps them up at night. If your solution is a luxury, not a need, adoption will be an uphill battle. Without adoption, your impact is limited, if not zero. Whether it’s a dashboard, API, or Excel sheet, talk to your users, and understand how the product will actually be used&ndash;assume as little as possible. In this context, a “user” can be a colleague, a customer, and generally anyone who interacts with your system’s output.</p>
+
+<p>By talking to your users, you understand their incentives and objectives and can begin to build a picture of what “value” looks like for this user. Identify it, then <span style="color:rgb(11,48,143)"><strong><em>pursue it aggressively</em></strong></span>. In some cases, your users may need help learning to think and inquire in a data-driven manner; investing in user education can empower them to lead you to value much faster.</p>
+
+<p>Build prototypes and ask users to test them, then act on their feedback and how they interact with the product. The key word here is “prototype”: parsimony is paramount, so start with the simplest solution and build up. Simplicity is especially important when it comes to data products, as it’s very easy to fall into a trap of unnecessary complexity that may or may not add actual business value. Additionally, starting large creates inflated expectations that are problematic in a field as uncertain as data science, not to mention the prolonged approval cycle compared to “a quick prototype”.</p>
+
+<p>When designing a product, it helps to describe your product using language that business-oriented stakeholders can understand and comfortably use to convey their needs, but software engineers and data scientists can clearly execute on. One good framework for this is the <a href="https://cucumber.io/docs/gherkin/">Gherkin syntax</a>, by which people can precisely describe product features and interactions in natural language.</p>
+
+<p><br>
+<br></p>
+
+<blockquote>
+<p><strong>Feature:</strong> Guess the word</p>
+
+<p># The first example has two steps</p>
+
+<p>Scenario: Maker starts a game</p>
+
+<p>&nbsp;&nbsp;When the Maker starts a game</p>
+
+<p>&nbsp;&nbsp;Then the Maker waits for a Breaker to join</p>
+
+<p># The second example has three steps</p>
+
+<p>Scenario: Breaker joins a game</p>
+
+<p>&nbsp;&nbsp;Given the Maker has started a game with the word &ldquo;silky&rdquo;</p>
+
+<p>&nbsp;&nbsp;When the Breaker joins the Maker&rsquo;s game</p>
+
+<p>&nbsp;&nbsp;Then the Breaker must guess a word with 5 characters</p>
+</blockquote>
+
+<p><p style="text-align: center;color:rgb(11,48,143)" > <strong><em>Example of Gherkin syntax</em></strong> </p></p>
+
+<p><br>
+<br></p>
+
+<p><h1 style="color:rgb(11,48,143)">2. Algorithms are a small cog in a big machine </h1>
+<br>
+While it certainly takes effort to build a good predictive model, a full data product requires infrastructure to support the model and make it reliable, usable, and timely. <span style="color:rgb(11,48,143)"><strong>Users need to trust that they will have consistent and easy access to fresh insights.</strong></span> The challenges in achieving this state are well-illustrated in <a href="https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43146.pdf">“Machine Learning: The High-Interest Credit Card of Technical Debt”</a>, which explains the different consequences that arise from ML system design patterns:</p>
+
+<blockquote>
+<p>&hellip;glue code system design pattern, in which a massive amount of supporting code is written to get data into and out of general-purpose packages.</p>
+
+<p>It may be surprising to the academic community to know that only a tiny fraction of the code in many machine learning systems is actually doing “machine learning”. When we recognize that a mature system might end up being (at most) 5% machine learning code and (at least) 95% glue code, reimplementation rather than reuse of a clumsy API looks like a much better strategy.</p>
+</blockquote>
+
+<p>To achieve reliability, it’s important to both prevent failures from happening, and react quickly when they (inevitably) do. To do so, you’ll need to give careful thought to both the processes and tools you employ. Code reviews and testing are table stakes when it comes to failure prevention processes, and tools like <a href="https://sentry.io/welcome/">Sentry</a>, <a href="https://www.pagerduty.com/">Pagerduty</a>, and <a href="https://aws.amazon.com/cloudwatch/">AWS CloudWatch</a> can help you detect and resolve problems quickly (and don’t forget the good ‘ole <span style="color:rgb(11,48,143)">“support@myorg.com”</span> email address). Failures can appear in many forms, such as software bugs and algorithmic underperformance, so make sure your toolkit can accommodate all failure modes relevant to your product.</p>
+
+<p>For your model’s insights to be usable, users need a method to access and consume them. Depending on the target user, this method may take the form of an API, end up being a full-fledged front-end interface, all of the above, or something in between. Accordingly, this adds the need for back- and front-end development beyond your data-related activities. There are ~infinitely many ways to build applications and APIs, so I won’t delve too deeply into that here; the point is to highlight that the job is <span style="color:rgb(11,48,143)"><strong>not</strong></span> done once you have a good model. I do, however, want to take the opportunity to highlight <a href="https://plot.ly/products/dash/">Dash</a>, a great way to build dashboards and interfaces in Python without writing any JavaScript. While I haven’t used Dash in production, it’s been a wonderful tool for constructing prototypes.</p>
+
+<p>Task scheduling and automation tools such as <a href="https://airflow.apache.org/">Airflow</a> can make it much easier to automate and track your data processing pipeline, ensuring that your data is as fresh and timely as needed. We’ll dive deeper into the importance of fresh data when we discuss the “algorithmic feedback loop”.</p>
+
+<p>There are loads of methods and utilities to manage different parts of the technical value chain and it’s very easy to “ADD ALL THE THINGS”, especially in cloud environments where there’s a service for everything, and the services are designed to connect seamlessly. For this reason, it’s important to be aware of the value-maintenance tradeoff: what value will this component add to my product, and how much effort will it be to maintain this component in the long run?</p>
+
+<p><br></p>
+
+<p><span style="color:rgb(11,48,143)">A model without supporting infrastructure is useless, as is a model bogged down by low-value, high-maintenance fluff. </span></p>
+
+<p><br>
+<br></p>
+
+<p><h1 style="color:rgb(11,48,143)">3. Data science is a human endeavor </h1>
+<br>
+Building a product involves people from a surprisingly wide range of backgrounds and roles: management, business, engineering, and finance to name a few. One of a product manager’s key roles is to convince everyone involved that the product is one worth committing time and resources to, i.e. to “buy in”. Data and logic can go a long way to convince them, but understanding stakeholders’ motivations at a personal level is a powerful tool often underrated by those in technical roles.</p>
+
+<p>Before AI ever takes all our jobs entirely, it’s likely going to augment them. Data product development should center around your user and their operational needs&ndash;remember that you’re building a tool to solve a pain. For this reason, the end user is the most important stakeholder of all; even if all other stakeholders rally behind the product and it gets built, it’s useless without user engagement.</p>
+
+<p><br></p>
+
+<p>Your users need to be convinced that using your product will help them achieve their objectives, without adding obstacles and frustration. To increase the likelihood of user engagement, design interfaces to your models that:</p>
+
+<ul>
+<li><p><span style="color:rgb(11,48,143)"> <strong>Reduce friction of adoption:</strong> </span> A model output embedded into an existing interface can be a lower friction way to introduce a new business process, compared to a completely brand-new interface.</p></li>
+
+<li><p><span style="color:rgb(11,48,143)"><strong>Speak your user’s language:</strong></span> An interface that conveys model outputs in overly mathematical language is likely to alienate. Convey your output in a way that makes it obvious to the recipient what their next action should be.</p></li>
+</ul>
+
+<p>To illustrate these design principles, consider a scenario where an organization wants to fight fraud and employs AI to help its analysts prioritize which cases to manually investigate.</p>
+
+<p><br></p>
+
+<p><span style="color:rgb(11,48,143)"><strong>Common ways this user experience can go wrong include:</strong> </span></p>
+
+<ul>
+<li><p>The analyst has to access a separate application to see the prioritization generated by the new system, but then has to go back to the old system to actually take action. This added step to a daily workflow, not to mention the friction of learning a new UI, can be frustrating to many users.</p></li>
+
+<li><p>The analyst sees too many outputs, possibly from many different systems, and comes to ignore them all as noise. In other words, the threshold on what is considered “alertable” is too low, and the very users the system was supposed to help now view it as a nuisance.</p></li>
+
+<li><p>The analyst is told “this is suspicious”, but doesn’t know what to do about it. Why is it suspicious? Between two cases the system has flagged as suspicious, which one should the analyst prioritize in her investigation? In other words, the output is not actionable.</p></li>
+</ul>
+
+<p>The best way to build a user-centric product is to both listen to the user directly, and observe how they actually use the product; this is where the idea of “feedback loops” comes in.</p>
+
+<p><br>
+<br></p>
+
+<p><h1 style="color:rgb(11,48,143)">4. Sustainable data products require you to balance three main feedback loops </h1>
+<br>
+Because data products are so dynamic, making monitoring and feedback loops central to your product design will give you timely information and contribute significantly to the long-term sustainability of your system. The visibility you gain from understanding and measuring these loops is crucial to understanding product performance and can help you prioritize features in your project’s roadmap.</p>
+
+<p>When defining your feedback loops, it helps to refer to Howard et al’s “Drivetrain Approach” mentioned earlier, and try to make sure you have feedback on each of its elements:</p>
+
+<blockquote>
+<p><span style="color:rgb(11,48,143)"><strong>Objective:</strong></span> What outcome am I trying to achieve?</p>
+
+<p><span style="color:rgb(11,48,143)"><strong>Levers:</strong></span> What inputs [and actions] can we control to influence the objective?</p>
+
+<p><span style="color:rgb(11,48,143)"><strong>Data:</strong></span> What data can we collect?</p>
+
+<p><span style="color:rgb(11,48,143)"><strong>Models:</strong></span> How do the levers influence the objective?</p>
+</blockquote>
+
+<p>While the types of feedback your product will need depend on the scenario, there are three main loops that I’ve found to be generally applicable to all data products:</p>
+
+<ul>
+<li><span style="color:rgb(11,48,143)"><strong>The algorithmic feedback loop:</strong></span> Is your <strong><em>model</em></strong> working, and is your <strong><em>data</em></strong> sound?</li>
+<li><span style="color:rgb(11,48,143)"><strong>The user feedback loop:</strong></span> Are your users empowered to achieve their <strong><em>objectives</em></strong>?</li>
+<li><span style="color:rgb(11,48,143)"><strong>The business feedback loop:</strong></span> Are you pulling the right <strong><em>levers</em></strong>?</li>
+</ul>
+
+<p>With the right monitoring infrastructure in place (remember: data products are a system, not an algorithm), you can give some thought to what metrics you should be monitoring, based on the feedback loop at hand. Metrics can be summary statistics, delivery times, net promoter scores, quarterly revenue&ndash;anything at all. Knowing what to measure is an art, and there are typically domain-specific resources &amp; practices to refer to as needed.</p>
+
+<p>If any of these loops fails, your product goes stale: either through poor model performance, lack of adoption, or losing stakeholder buy-in. In each of these cases, if users and stakeholders are not convinced that the product will improve their bottom line, they simply won’t support it.</p>
+
+<p><br>
+<br></p>
+
+<p><h2 style="color:rgb(11,48,143)"> The algorithmic feedback loop</h2>
+To make sure an algorithmic approach is working well, I ask myself two main questions:</p>
+
+<ol>
+<li><p>Is the model I’ve used appropriate for both the <span style="color:rgb(11,48,143)"><strong>underlying natural process</strong></span> and the <span style="color:rgb(11,48,143)"><strong>type/volume of data available</strong></span>?</p></li>
+
+<li><p>Is my data feed at time <em>t</em> representative of the process I’m trying to model? Are there <span style="color:rgb(11,48,143)"><strong>changes in the underlying process</strong></span> that may manifest themselves in a drifting data distribution?</p></li>
+</ol>
+
+<p>The literature on model evaluation is extensive, so I won’t go into that here. When modeling, we rarely fail to use evaluation metrics in our <em>initial</em> development phase, but it’s important that we have <em>continuous</em> and automated visibility into performance over time.</p>
+
+<p>If you want your algorithms to perform consistently, your model needs access to data that continues to reflect the real-world distribution of the process it’s trying to estimate. This doesn’t necessarily mean streaming data feeds; <span style="color:rgb(11,48,143)"><strong>it’s up to you to determine the sensitivity of the process you’re trying to estimate.</strong></span> Going a step further and incorporating data versioning into your design is a powerful tool for understanding and improving past performance.</p>
+
+<p>For continuous visibility into these metrics and more, it helps to set up developer-facing dashboards and alerts. I personally use <a href="https://grafana.com/">Grafana</a> for this, but there are several other tools optimized for different types of products&ndash;<a href="https://mlflow.org/">MLflow</a> is one solution I’m excited to try using soon.</p>
+
+<p><br>
+<br></p>
+
+<p><h2 style="color:rgb(11,48,143)">The user feedback loop </h2>
+A key part of your system is how users interact with your analytical output: Does it help or hinder them? Is the information presented in a way that is easy for them to consume, and in a way that clarifies what they should do next? Do certain elements of your product design affect the user’s trust in the models?</p>
+
+<p>Continuously measure these things through tools like user focus groups, usage logs, and feedback &amp; bug submission tools (I’m particularly fond of <a href="https://usersnap.com/">Usersnap</a>&ndash;their Jira integration is great).</p>
+
+<p>In some data products, the user and algorithmic feedback loops are heavily coupled. Consider a system that relies on analysts to label its output in order to improve: If the analysts view the system as an annoyance, they’ll ignore it, consequently breaking the algorithmic feedback loop and causing the model to underperform.</p>
+
+<p><br>
+<br></p>
+
+<p><h2 style="color:rgb(11,48,143)">The business feedback loop </h2>
+The aim of this loop is to keep an eye on the objective: is our combination of data, models, and levers actually changing our bottom line? You can have great models and good UX, but if the system doesn’t change anything on the ground, what have you achieved?</p>
+
+<p>In addition to collecting data for this loop, it’s important to establish regular lines of two-way communication between your project team and the product’s business stakeholders to maintain alignment. The team can drift in their understanding of the problem, and the stakeholders’ objectives may actually change midway, so it’s good to make sure everyone is on the same page.</p>
+
+<p><br>
+<br></p>
+
+<p><h1 style="color:rgb(11,48,143)">5. Document things obsessively </h1>
+<h2 style="color:rgb(11,48,143)">Documenting things for your team</h2>
+In general, organizations are getting better when it comes to documentation and version control on code, but it feels like we’re a ways from agreed-upon standards for documenting business practices, data sources, and analytical workflows, because of how idiosyncratic these can be.</p>
+
+<p>From personal experience, every hour I’ve spent documenting the rationale behind an algorithmic approach, the architecture for a new system, or my thoughts on the business landscape of a given product, has paid generous dividends down the road.</p>
+
+<p><br></p>
+
+<p><span style="color:rgb(11,48,143)"><strong>Key benefits of documentation:</strong></span></p>
+
+<ul>
+<li><p><span style="color:rgb(11,48,143)"><strong>Reducing your “bus factor”:</strong></span> The bus factor (aka “key person risk”) is a notion of the risk your organization faces if the most knowledgeable person were to be hit by a bus on the way to work tomorrow. Easily accessible documentation ensures that people can quickly pick up where others left off.</p></li>
+
+<li><p><span style="color:rgb(11,48,143)"><strong>Quick on-boarding:</strong></span> related to the bus factor, having good documentation can make on-boarding new team members a breeze. After we revamped our documentation practices, new members were up to speed almost 3x faster.</p></li>
+
+<li><p><span style="color:rgb(11,48,143)"><strong>Thinking clearly, moving confidently:</strong></span> This is essentially the same concept behind “rubber ducky debugging”, but for a wider range of problems and concepts. Forcing yourself to explain something clearly to others exposes weak points and ambiguity you may not have been aware of before. It takes time, but “slow is steady, and steady is fast.”</p></li>
+</ul>
+
+<p><br></p>
+
+<p>Because this post is mainly about data products, I’d like to highlight one special type of documentation: <span style="color:rgb(11,48,143)"><strong>data dictionaries.</strong></span> While they may have a more specific definition in the IBM/Oracle ecosystem, I consider a good data dictionary to be a document that describes:</p>
+
+<ul>
+<li>The data’s source and the business process generating it</li>
+<li>Value types and bounds</li>
+<li>The business meaning of the data fields&ndash;how does this data relate to the real world?</li>
+<li>Summary statistics</li>
+</ul>
+
+<p><br></p>
+
+<p>When available, data dictionaries give you a relevant, quick view of the information you can use to solve a problem. Additionally, understanding how your data is generated can give you insight into necessary adjustments, help avoid potential pitfalls, and clarify nuances you need to take into account (e.g. timezones, unusual formats, etc.).</p>
+
+<p>When possible, it’s also enormously helpful to track where data sources are used within an organization. This helps with catching data-related issues downstream, especially in organizations where data feeds are shared across product teams who may not communicate too frequently or clearly.</p>
+
+<p>There are countless tools for knowledge management within teams; we started with files on Dropbox, then moved to Google Docs before settling on <a href="https://www.atlassian.com/software/confluence">Confluence</a>, and our experience thus far has been great. The integration with Jira makes it very easy to find information when and where you need it.</p>
+
+<p><br>
+<br></p>
+
+<p><h2 style="color:rgb(11,48,143)">Documenting things for others</h2>
+Most of the above concerns documentation within the development team. External (stakeholder-facing) documentation is just as, if not more, important than team-based documentation. For example:</p>
+
+<ul>
+<li><p><span style="color:rgb(11,48,143)"><strong>Non-technical user guides</strong></span> for your products are crucial in onboarding business users to your new, unfamiliar technology; it gives them the comfort of knowing there’s a document to answer most of their questions, and a well-written user guide can even allow users to onboard themselves.</p></li>
+
+<li><p><span style="color:rgb(11,48,143)"><strong>Technical guides,</strong></span> such as API documentation and overall system design, are immensely useful for power users and technical stakeholders who may need to go beyond what’s already there, e.g. integration with other products, adding new functionality, etc.</p></li>
+</ul>
+
+<p>In both cases, a key benefit is that external-facing documentation can reduce the demand for support from your team, freeing them to work on more valuable tasks.</p>
+
+<p>And if nothing I’ve said has convinced you that documentation is worth your time, the worst-case scenario is that it’ll make you a better communicator, which is a key factor of success in so many personal and professional domains.</p>
+
+<p><br>
+<br></p>
+
+<p><h1 style="color:rgb(11,48,143)">Closing remarks</h1><br />
+There are many crucial parts of data product development that this post does not cover. However, I hope that the thought processes and design principles I&rsquo;ve outlined are useful as a general compass for navigating the development of data products.</p>
+
+<p>If this post was helpful to you, or you have a suggestion, or would just like to share your experience, please get in touch!</p>
+
+<p><em>Many thanks to <a href="https://www.twitter.com/jalammar">Jay Alammar</a>, <a href="https://www.twitter.com/mohmmadhd">Mohammed Alhamdan</a>, <a href="https://www.twitter.com/alsaeeda421">Abdullah Alsaeed</a>, and <a href="https://www.twitter.com/hsibyani">Hassan Alsibyani</a> for their thoughtful review and invaluable feedback while writing this post!</em></p>
+</div>
+
+    
+    
+
+    
+
+    
+
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

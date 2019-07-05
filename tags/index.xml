@@ -6,9 +6,46 @@
     <description>Recent content in Tags on M. Alsobay</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://malsobay.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>data science</title>
+      <link>https://malsobay.com/tags/data-science/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://malsobay.com/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://malsobay.com/tags/design/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://malsobay.com/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://malsobay.com/tags/development/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://malsobay.com/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>product</title>
+      <link>https://malsobay.com/tags/product/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://malsobay.com/tags/product/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
